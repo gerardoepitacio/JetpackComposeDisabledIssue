@@ -41,13 +41,14 @@ class MainActivity : ComponentActivity() {
                     }
 
                     Box(
-                        contentAlignment = Alignment.Center
+                        contentAlignment = Alignment.TopCenter
                     ) {
 
                         Column(
                             modifier = Modifier
-                                .wrapContentSize(),
-                            verticalArrangement = Arrangement.Center,
+                                .wrapContentSize()
+                                .padding(top = 100.dp),
+                            verticalArrangement = Arrangement.Top,
                             horizontalAlignment = Alignment.CenterHorizontally
                         ) {
 
@@ -61,6 +62,16 @@ class MainActivity : ComponentActivity() {
                                     value.value = it
                                 },
                                 enabled = enabled.value
+                            )
+
+                            Divider(modifier = Modifier.padding(24.dp))
+
+                            OutlinedTextField(
+                                value = value.value,
+                                onValueChange = {
+
+                                    value.value = it
+                                }
                             )
 
                             Divider(modifier = Modifier.padding(64.dp))

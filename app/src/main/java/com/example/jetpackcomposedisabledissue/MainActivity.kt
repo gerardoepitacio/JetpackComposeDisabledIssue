@@ -51,7 +51,7 @@ class MainActivity : ComponentActivity() {
                             horizontalAlignment = Alignment.CenterHorizontally
                         ) {
 
-                            
+
                             val value: MutableState<String> = remember { mutableStateOf("") }
 
                             OutlinedTextField(
@@ -60,8 +60,7 @@ class MainActivity : ComponentActivity() {
 
                                     value.value = it
                                 },
-                                enabled = enabled.value,
-                                readOnly = !enabled.value,
+                                enabled = enabled.value
                             )
 
                             Divider(modifier = Modifier.padding(64.dp))

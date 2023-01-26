@@ -51,6 +51,7 @@ class MainActivity : ComponentActivity() {
                             horizontalAlignment = Alignment.CenterHorizontally
                         ) {
 
+                            
                             val value: MutableState<String> = remember { mutableStateOf("") }
 
                             OutlinedTextField(
